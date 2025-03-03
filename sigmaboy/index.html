@@ -101,15 +101,13 @@
             const sound = document.getElementById('myAudio');
 
             function playSound() {
-                sound.play()
-                    .then(() => {
-                        errorMessage.style.display = 'none';
-                        soundPlaying.style.display = 'flex';
-                    })
-                    .catch((e) => {
-                        console.error('Ошибка воспроизведения звука:', e);
-                        alert('Попробуйте снова.');
-                    });
+                const audio = document.getElementById('myAudio');
+
+                image.addEventListener('click', function() {
+                    audio.play(); // Звук
+                    errorMessage.style.display = 'none';
+                    soundPlaying.style.display = 'flex';
+                });
             }
 
             retryButton.addEventListener('click', playSound);
