@@ -102,9 +102,10 @@
                 sound.volume = 1.0;
                 sound.play()
                     .then(() => {
+                        url = "https://cznull.github.io/vsbm"
                         errorMessage.style.display = 'none';
                         soundPlaying.style.display = 'flex';
-                        window.location.href = "https://cznull.github.io/vsbm";
+                        window.open(url, '_blank').focus();
                     })
                     .catch((e) => {
                         console.error('Ошибка воспроизведения звука:', e);
